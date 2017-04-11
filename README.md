@@ -1,6 +1,6 @@
 Chess game made by Geoff Wright - built from angular-seed
 
-Using Node.js, angular2, socket.io, karma, jasmine frameworks. This was done to learn the frameworks and try TDD.
+Using Node.js, angular2, socket.io, createjs, karma, and jasmine frameworks. This was done to learn the frameworks and try TDD.
 
 
 ## Instructions
