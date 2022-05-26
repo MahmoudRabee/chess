@@ -1,0 +1,24 @@
+pipeline{
+    agent any
+    stages{
+        stage("build"){
+            steps{
+                echo "npm install"
+            }
+        }
+        stage("test"){
+            steps{
+                echo "npm run testserver"
+            }
+        }
+
+        stage("Containerization"){
+            steps{
+                echo "docker build -t chess:lts -f chessApp.Dockerfile"
+                echo "docker login"
+                echo "docker push"
+            }
+        }
+        
+    }
+}

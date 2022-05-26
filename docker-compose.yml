@@ -1,0 +1,20 @@
+version: '2.2'
+services:
+  # website:
+  #   build:
+  #     context: .
+  #     dockerfile: ./chessApp.Dockerfile
+  #   ports:
+  #     - 80:9000
+  
+  jenkins:
+    build:
+      context: ./jenkins
+      dockerfile: ./jenkins/Dockerfile
+    volumes:
+    - /jenkins_home:/var/jenkins_home
+    - $(pwd):/app
+    - /var/run/docker.sock:/var/run/docker.sock
+    - $(which docker):usr:bin/docker
+    ports:
+      - 8080:8080
