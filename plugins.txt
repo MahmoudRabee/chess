@@ -1,5 +1,0 @@
-workflow-aggregator
-seed
-git
-Credentials
-Credentials Binding

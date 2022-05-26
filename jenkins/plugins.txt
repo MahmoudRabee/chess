@@ -1,0 +1,5 @@
+workflow-aggregator
+seed
+git
+credentials:latest
+credentials-binding:latest

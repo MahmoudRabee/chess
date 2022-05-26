@@ -7,14 +7,12 @@ services:
   #   ports:
   #     - 80:9000
   
-  jenkins:
+  ssci:
     build:
       context: ./jenkins
-      dockerfile: ./jenkins/Dockerfile
+      # dockerfile: ./jenkins/Dockerfile
     volumes:
     - /jenkins_home:/var/jenkins_home
-    - $(pwd):/app
-    - /var/run/docker.sock:/var/run/docker.sock
-    - $(which docker):usr:bin/docker
+    - //var/run/docker.sock:/var/run/docker.sock
     ports:
       - 8080:8080
