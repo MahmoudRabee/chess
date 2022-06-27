@@ -19,5 +19,7 @@ jobs:
     - name: run the Docker image
       run: docker run -d -p 9000:9000 chessapp:latest    
     - name: test the server 
-      run: curl -I http://localhost:9000
+      run: |
+        sleep 20
+        curl -I http://localhost:9000
       
