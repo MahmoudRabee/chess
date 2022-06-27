@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build -t chessapp .
+    - name: run the Docker image
+      run: docker run -d -p 9000:9000 chessapp:latest    
+    - name: test the server 
+      run: curl -I http://localhost:9000
+      
